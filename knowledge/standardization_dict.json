@@ -1,0 +1,338 @@
+{
+  "schema_version": 3,
+  "provenance": "project_input_schema",
+  "note": "Проверьте единицы измерения и референсы лаборатории. Рабочие пороги скрининга не заменяют клиническую оценку.",
+  "fields": {
+    "hemoglobin": {
+      "label": "Гемоглобин",
+      "unit": "г/л",
+      "max": 300
+    },
+    "RBC": {
+      "label": "Эритроциты",
+      "unit": "10^12/л",
+      "max": 15
+    },
+    "hematocrit": {
+      "label": "Гематокрит",
+      "unit": "%",
+      "max": 80
+    },
+    "MCV": {
+      "label": "MCV",
+      "unit": "фл",
+      "max": 200
+    },
+    "MCH": {
+      "label": "MCH",
+      "unit": "пг",
+      "max": 80
+    },
+    "MCHC": {
+      "label": "MCHC",
+      "unit": "г/л",
+      "max": 600
+    },
+    "RDW": {
+      "label": "RDW",
+      "unit": "%",
+      "max": 60
+    },
+    "platelets": {
+      "label": "Тромбоциты",
+      "unit": "10^9/л",
+      "max": 3000
+    },
+    "WBC": {
+      "label": "Лейкоциты",
+      "unit": "10^9/л",
+      "max": 500
+    },
+    "reticulocytes": {
+      "label": "Ретикулоциты",
+      "unit": "%",
+      "max": 100
+    },
+    "ferritin": {
+      "label": "Ферритин",
+      "unit": "мкг/л",
+      "max": 100000
+    },
+    "serum_iron": {
+      "label": "Сывороточное железо",
+      "unit": "мкмоль/л",
+      "max": 300
+    },
+    "transferrin": {
+      "label": "Трансферрин",
+      "unit": "г/л",
+      "max": 10
+    },
+    "TIBC": {
+      "label": "ОЖСС",
+      "unit": "мкмоль/л",
+      "max": 300
+    },
+    "UIBC": {
+      "label": "ЛЖСС",
+      "unit": "мкмоль/л",
+      "max": 300
+    },
+    "TSAT": {
+      "label": "Насыщение трансферрина",
+      "unit": "%",
+      "max": 100
+    },
+    "sTfR": {
+      "label": "Растворимый рецептор трансферрина",
+      "unit": "мг/л",
+      "max": 100
+    },
+    "Ret_He": {
+      "label": "Гемоглобин ретикулоцитов",
+      "unit": "пг",
+      "max": 80
+    },
+    "vitamin_B12": {
+      "label": "Витамин B12",
+      "unit": "пг/мл",
+      "max": 50000
+    },
+    "active_B12": {
+      "label": "Активный B12",
+      "unit": "пмоль/л",
+      "max": 5000
+    },
+    "MMA": {
+      "label": "Метилмалоновая кислота",
+      "unit": "мкмоль/л",
+      "max": 100
+    },
+    "homocysteine": {
+      "label": "Гомоцистеин",
+      "unit": "мкмоль/л",
+      "max": 500
+    },
+    "folate": {
+      "label": "Фолаты",
+      "unit": "нг/мл",
+      "max": 200
+    },
+    "vitamin_B6": {
+      "label": "Витамин B6 PLP",
+      "unit": "нмоль/л",
+      "max": 5000
+    },
+    "copper": {
+      "label": "Медь",
+      "unit": "мкмоль/л",
+      "max": 200
+    },
+    "ceruloplasmin": {
+      "label": "Церулоплазмин",
+      "unit": "г/л",
+      "max": 5
+    },
+    "CRP": {
+      "label": "СРБ",
+      "unit": "мг/л",
+      "max": 1000
+    },
+    "ESR": {
+      "label": "СОЭ",
+      "unit": "мм/ч",
+      "max": 200
+    },
+    "creatinine": {
+      "label": "Креатинин",
+      "unit": "мкмоль/л",
+      "max": 3000
+    },
+    "eGFR": {
+      "label": "рСКФ",
+      "unit": "мл/мин/1.73м2",
+      "max": 300
+    },
+    "TSH": {
+      "label": "ТТГ",
+      "unit": "мМЕ/л",
+      "max": 1000
+    },
+    "albumin": {
+      "label": "Альбумин",
+      "unit": "г/л",
+      "max": 100
+    },
+    "LDH": {
+      "label": "ЛДГ",
+      "unit": "Ед/л",
+      "max": 50000
+    },
+    "indirect_bilirubin": {
+      "label": "Непрямой билирубин",
+      "unit": "мкмоль/л",
+      "max": 1000
+    },
+    "haptoglobin": {
+      "label": "Гаптоглобин",
+      "unit": "г/л",
+      "max": 10
+    }
+  },
+  "model_features": [
+    "age_years",
+    "sex",
+    "hemoglobin",
+    "RBC",
+    "hematocrit",
+    "MCV",
+    "MCH",
+    "MCHC",
+    "RDW",
+    "platelets",
+    "WBC",
+    "reticulocytes",
+    "ferritin",
+    "serum_iron",
+    "transferrin",
+    "TIBC",
+    "UIBC",
+    "TSAT",
+    "sTfR",
+    "Ret_He",
+    "vitamin_B12",
+    "active_B12",
+    "MMA",
+    "homocysteine",
+    "folate",
+    "vitamin_B6",
+    "copper",
+    "ceruloplasmin",
+    "CRP",
+    "ESR",
+    "creatinine",
+    "eGFR",
+    "TSH",
+    "albumin",
+    "LDH",
+    "indirect_bilirubin",
+    "haptoglobin"
+  ],
+  "excluded_targets": [
+    "B12_deficiency",
+    "B6_deficiency",
+    "anemia",
+    "anemia_class",
+    "copper_deficiency",
+    "deficiency_cause",
+    "folate_deficiency",
+    "inflammation_anemia",
+    "iron_deficiency",
+    "mixed_deficiency"
+  ],
+  "aliases": {
+    "hemoglobin": "hemoglobin",
+    "rbc": "RBC",
+    "hematocrit": "hematocrit",
+    "mcv": "MCV",
+    "mch": "MCH",
+    "mchc": "MCHC",
+    "rdw": "RDW",
+    "platelets": "platelets",
+    "wbc": "WBC",
+    "reticulocytes": "reticulocytes",
+    "ferritin": "ferritin",
+    "serumiron": "serum_iron",
+    "transferrin": "transferrin",
+    "tibc": "TIBC",
+    "uibc": "UIBC",
+    "tsat": "TSAT",
+    "stfr": "sTfR",
+    "rethe": "Ret_He",
+    "vitaminb12": "vitamin_B12",
+    "activeb12": "active_B12",
+    "mma": "MMA",
+    "homocysteine": "homocysteine",
+    "folate": "folate",
+    "vitaminb6": "vitamin_B6",
+    "copper": "copper",
+    "ceruloplasmin": "ceruloplasmin",
+    "crp": "CRP",
+    "esr": "ESR",
+    "creatinine": "creatinine",
+    "egfr": "eGFR",
+    "tsh": "TSH",
+    "albumin": "albumin",
+    "ldh": "LDH",
+    "indirectbilirubin": "indirect_bilirubin",
+    "haptoglobin": "haptoglobin",
+    "ageyears": "age_years",
+    "sex": "sex",
+    "patientid": "patient_id",
+    "гемоглобин": "hemoglobin",
+    "эритроциты": "RBC",
+    "гематокрит": "hematocrit",
+    "тромбоциты": "platelets",
+    "лейкоциты": "WBC",
+    "ретикулоциты": "reticulocytes",
+    "ферритин": "ferritin",
+    "сывороточноежелезо": "serum_iron",
+    "трансферрин": "transferrin",
+    "ожсс": "TIBC",
+    "лжсс": "UIBC",
+    "насыщениетрансферрина": "TSAT",
+    "растворимыйрецептортрансферрина": "sTfR",
+    "гемоглобинретикулоцитов": "Ret_He",
+    "витаминb12": "vitamin_B12",
+    "активныйb12": "active_B12",
+    "метилмалоноваякислота": "MMA",
+    "гомоцистеин": "homocysteine",
+    "фолаты": "folate",
+    "витаминb6plp": "vitamin_B6",
+    "медь": "copper",
+    "церулоплазмин": "ceruloplasmin",
+    "срб": "CRP",
+    "соэ": "ESR",
+    "креатинин": "creatinine",
+    "рскф": "eGFR",
+    "ттг": "TSH",
+    "альбумин": "albumin",
+    "лдг": "LDH",
+    "непрямойбилирубин": "indirect_bilirubin",
+    "гаптоглобин": "haptoglobin",
+    "возраст": "age_years",
+    "возрастлет": "age_years",
+    "age": "age_years",
+    "пол": "sex",
+    "gender": "sex",
+    "кодпациента": "patient_id",
+    "hb": "hemoglobin",
+    "hgb": "hemoglobin",
+    "гемоглобинhb": "hemoglobin",
+    "hct": "hematocrit",
+    "plt": "platelets",
+    "ret": "reticulocytes",
+    "ret%": "reticulocytes",
+    "b12": "vitamin_B12",
+    "в12": "vitamin_B12",
+    "витаминв12": "vitamin_B12",
+    "totalb12": "vitamin_B12",
+    "holotc": "active_B12",
+    "holotranscobalamin": "active_B12",
+    "голотранскобаламин": "active_B12",
+    "фолиеваякислота": "folate",
+    "folicacid": "folate",
+    "chr": "Ret_He",
+    "b6": "vitamin_B6",
+    "plp": "vitamin_B6",
+    "витаминb6": "vitamin_B6",
+    "витаминв6": "vitamin_B6",
+    "кнт": "TSAT",
+    "rdwcv": "RDW",
+    "среактивныйбелок": "CRP"
+  },
+  "anemia_thresholds": {
+    "F": 120,
+    "M": 130
+  }
+}

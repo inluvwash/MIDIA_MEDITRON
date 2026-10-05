@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.streamlit/secrets.toml
+books/
+books_cache/
+*.log
+
+data/confirmed_cases.json
+
+.env
+config/.env

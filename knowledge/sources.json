@@ -1,0 +1,129 @@
+[
+  {
+    "id": "case_su",
+    "title": "Кейс Сеченовского университета: веб-сервис ИИ-скрининга латентных дефицитных состояний",
+    "kind": "primary_specification",
+    "location": "spec/Кейс_СУ.pdf",
+    "note": "Главное ТЗ проекта: взрослые пациенты, пороги Hb, 12 классов anemia_class, требования к сервису и отчёту."
+  },
+  {
+    "id": "dataset_su",
+    "title": "Предоставленный датасет deficiency_anemia.csv",
+    "kind": "primary_dataset",
+    "location": "data/deficiency_anemia.csv",
+    "note": "840 взрослых пациентов, 48 столбцов, 12 целевых классов. Используется для обучения, технической валидации и карты неопределённости."
+  },
+  {
+    "id": "variables_su",
+    "title": "Словарь переменных variables.xlsx, предоставленный с кейсом",
+    "kind": "primary_data_dictionary",
+    "location": "spec/variables.xlsx",
+    "note": "48 переменных: имя, описание и исходная единица. Используется как контракт колонок и метаданных; канонизация единиц выполняется приложением отдельно."
+  },
+  {
+    "id": "who_hb_2024",
+    "title": "WHO. Guideline on haemoglobin cutoffs to define anaemia in individuals and populations",
+    "kind": "guideline",
+    "year": 2024,
+    "url": "https://www.who.int/publications-detail-redirect/9789240088542",
+    "note": "Источник по определению анемии и гемоглобиновым порогам; в проекте приоритет имеют точные пороги из кейса."
+  },
+  {
+    "id": "bsg_iron_2021",
+    "title": "British Society of Gastroenterology guidelines for the management of iron deficiency anaemia in adults",
+    "kind": "guideline",
+    "year": 2021,
+    "url": "https://gut.bmj.com/content/70/11/2030.long",
+    "note": "Ferritin как ключевой маркер, влияние воспаления, роль TSAT, sTfR и reticulocyte Hb."
+  },
+  {
+    "id": "aafp_b12_2017",
+    "title": "Vitamin B12 Deficiency: Recognition and Management",
+    "kind": "review_guidance",
+    "year": 2017,
+    "url": "https://www.aafp.org/afp/2017/0915/p384",
+    "note": "Пограничный B12, подтверждение MMA, факторы риска."
+  },
+  {
+    "id": "merck_megaloblastic_2026",
+    "title": "Merck Manual Professional: Megaloblastic Macrocytic Anemias",
+    "kind": "clinical_reference",
+    "year": 2026,
+    "url": "https://www.merckmanuals.com/professional/hematology-and-oncology/anemias-caused-by-deficient-erythropoiesis/megaloblastic-macrocytic-anemias",
+    "note": "B12/folate differential, MMA and homocysteine, macrocytosis and mixed patterns."
+  },
+  {
+    "id": "merck_folate_2026",
+    "title": "Merck Manual Professional: Folate Deficiency",
+    "kind": "clinical_reference",
+    "year": 2026,
+    "url": "https://www.merckmanuals.com/professional/nutritional-disorders/vitamin-deficiency%2C-dependency%2C-and-toxicity/folate-deficiency",
+    "note": "Фолатный дефицит и лабораторное подтверждение."
+  },
+  {
+    "id": "merck_b6_2026",
+    "title": "Merck Manual Professional: Vitamin B6 Deficiency and Dependency",
+    "kind": "clinical_reference",
+    "year": 2026,
+    "url": "https://www.merckmanuals.com/professional/nutritional-disorders/vitamin-deficiency-dependency-and-toxicity/vitamin-b6-deficiency-and-dependency",
+    "note": "Клинический контекст B6-дефицита; лабораторные пороги в проекте считаются рабочими, а не универсальными."
+  },
+  {
+    "id": "merck_copper_2025",
+    "title": "Merck Manual Professional: Copper Deficiency",
+    "kind": "clinical_reference",
+    "year": 2025,
+    "url": "https://www.merckmanuals.com/professional/nutritional-disorders/mineral-deficiency-and-toxicity/copper-deficiency",
+    "note": "Низкие медь и церулоплазмин, анемия/нейропатия при дефиците меди."
+  },
+  {
+    "id": "kdigo_anemia_2026",
+    "title": "KDIGO Clinical Practice Guideline for the Management of Anemia in Chronic Kidney Disease",
+    "kind": "guideline",
+    "year": 2026,
+    "url": "https://kdigo.org/guidelines/anemia-in-ckd/",
+    "note": "Почечное направление анемии и интерпретация ferritin/TSAT при воспалении и CKD."
+  },
+  {
+    "id": "minzdrav_cr_registry_2026",
+    "title": "Рубрикатор клинических рекомендаций Минздрава России",
+    "kind": "official_rf_registry",
+    "jurisdiction": "RU",
+    "checked_at": "2026-10-03",
+    "url": "https://cr.minzdrav.gov.ru/",
+    "note": "Официальный рубрикатор Минздрава РФ. Проверено 03.10.2026: новая КР «Железодефицитная анемия» находится среди разрабатываемых/на общественном обсуждении (окончание 23.10.2026), поэтому проект не использует её как утверждённый норматив."
+  },
+  {
+    "id": "minzdrav_icd10_registry",
+    "title": "Минздрав России: Международная классификация болезней 10-го пересмотра (МКБ-10) в справочниках рубрикатора",
+    "kind": "official_rf_classification",
+    "jurisdiction": "RU",
+    "checked_at": "2026-10-03",
+    "url": "https://cr.minzdrav.gov.ru/",
+    "note": "МКБ-10 используется только как справочник для врача; скрининговый класс не преобразуется в код автоматически."
+  },
+  {
+    "id": "who_ferritin_2020",
+    "title": "WHO guideline on use of ferritin concentrations to assess iron status in individuals and populations",
+    "kind": "who_guideline",
+    "year": 2020,
+    "url": "https://www.who.int/publications/i/item/9789240000124",
+    "note": "ВОЗ: ферритин является маркером запасов железа; при инфекции/воспалении у взрослых значение <70 мкг/л может использоваться как признак дефицита железа."
+  },
+  {
+    "id": "who_icd10_2019",
+    "title": "WHO ICD-10 — Chapter III, nutritional anaemias and other anaemias",
+    "kind": "who_classification",
+    "year": 2019,
+    "url": "https://icd.who.int/browse10/2019/en",
+    "note": "Семейства D50 (железодефицитная анемия), D51 (B12-дефицитная анемия), D52 (фолиеводефицитная анемия), D53 (другие алиментарные анемии), D63* (анемия при хронических болезнях), D64 (другие анемии)."
+  },
+  {
+    "id": "nice_b12_2024",
+    "title": "NICE NG239. Vitamin B12 deficiency in over 16s: diagnosis and management",
+    "kind": "international_guideline",
+    "year": 2024,
+    "url": "https://www.nice.org.uk/guidance/ng239/chapter/recommendations",
+    "note": "Актуальная международная поддерживающая рекомендация по total/active B12, неопределённой зоне и MMA. Не является нормативным документом РФ; локальные лабораторные референсы сохраняют приоритет."
+  }
+]

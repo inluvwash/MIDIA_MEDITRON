@@ -1,0 +1,37 @@
+services:
+  web:
+    build: .
+    command: >-
+      python -m streamlit run HealthScreening.py
+      --server.address=0.0.0.0
+      --server.port=8501
+      --browser.gatherUsageStats=false
+    ports:
+      - "8501:8501"
+    environment:
+      OLLAMA_URL: ${OLLAMA_URL:-http://host.docker.internal:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5:7b}
+      LOCAL_CASES_PATH: /app/runtime/confirmed_cases.json
+    volumes:
+      - midia_runtime:/app/runtime
+      - ./books:/app/books
+    restart: unless-stopped
+
+  api:
+    build: .
+    command: python -m uvicorn api:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    environment:
+      HEALTHSCREENING_API_KEY: ${HEALTHSCREENING_API_KEY:-}
+      OLLAMA_URL: ${OLLAMA_URL:-http://host.docker.internal:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5:7b}
+      LOCAL_CASES_PATH: /app/runtime/confirmed_cases.json
+    volumes:
+      - midia_runtime:/app/runtime
+      - ./books:/app/books
+    profiles: ["api"]
+    restart: unless-stopped
+
+volumes:
+  midia_runtime:

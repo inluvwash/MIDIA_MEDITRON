@@ -1,0 +1,27 @@
+{
+  "age_years": 52,
+  "sex": "F",
+  "hemoglobin": {
+    "value": 109,
+    "unit": "г/л"
+  },
+  "MCV": {
+    "value": 84,
+    "unit": "фл"
+  },
+  "RDW": {
+    "value": 18.2,
+    "unit": "%"
+  },
+  "ferritin": {
+    "value": 120,
+    "unit": "мкг/л"
+  },
+  "CRP": {
+    "value": 18,
+    "unit": "мг/л"
+  },
+  "complaints": "слабость, снижение переносимости нагрузки",
+  "history": "ревматоидное воспалительное заболевание",
+  "medications": "не указаны"
+}

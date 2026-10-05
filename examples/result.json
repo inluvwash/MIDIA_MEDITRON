@@ -1,0 +1,574 @@
+{
+  "schema_version": 8,
+  "created_at": "2026-10-04T11:25:46",
+  "status": "ok",
+  "patient": {
+    "patient_id": "anonymous",
+    "age_years": 52.0,
+    "sex": "F",
+    "labs": {
+      "hemoglobin": 109.0,
+      "MCV": 84.0,
+      "RDW": 18.2,
+      "ferritin": 120.0,
+      "CRP": 18.0
+    },
+    "units": {
+      "hemoglobin": "г/л",
+      "MCV": "фл",
+      "RDW": "%",
+      "ferritin": "мкг/л",
+      "CRP": "мг/л"
+    },
+    "warnings": [],
+    "context": {
+      "complaints": "слабость, снижение переносимости нагрузки",
+      "symptoms": [],
+      "history": "ревматоидное воспалительное заболевание",
+      "medications": "не указаны"
+    }
+  },
+  "clinical": {
+    "anemia": true,
+    "threshold": 120.0,
+    "hemoglobin": 109.0,
+    "signals": {
+      "iron": {
+        "strength": 0.0,
+        "positive": false,
+        "evidence": []
+      },
+      "b12": {
+        "strength": 0,
+        "positive": false,
+        "evidence": []
+      },
+      "folate": {
+        "strength": 0,
+        "positive": false,
+        "evidence": []
+      },
+      "b6": {
+        "strength": 0,
+        "positive": false,
+        "evidence": []
+      },
+      "copper": {
+        "strength": 0,
+        "positive": false,
+        "evidence": []
+      },
+      "inflammation": {
+        "strength": 2,
+        "positive": false,
+        "evidence": [
+          "CRP 18 мг/л > 5",
+          "ферритин 120 мкг/л не снижен"
+        ]
+      }
+    },
+    "findings": [
+      {
+        "code": "hb_threshold",
+        "text": "Гемоглобин 109 г/л; порог анемии по ТЗ для указанного пола — менее 120 г/л. Признак анемии есть.",
+        "severity": "warning",
+        "source_ids": [
+          "case_su",
+          "who_hb_2024"
+        ]
+      },
+      {
+        "code": "inflammation_pattern",
+        "text": "Воспалительный / железо-ограниченный паттерн: CRP 18 мг/л > 5; ферритин 120 мкг/л не снижен. Ферритин является белком острой фазы, поэтому его нормальное или повышенное значение не исключает ограничение доступности железа.",
+        "severity": "info",
+        "source_ids": [
+          "who_ferritin_2020",
+          "bsg_iron_2021",
+          "kdigo_anemia_2026"
+        ]
+      },
+      {
+        "code": "normal_mcv_high_rdw",
+        "text": "MCV 84 фл нормоцитарный, но RDW 18.2% повышен: разнонаправленные дефициты могут маскировать изменение среднего объёма эритроцита.",
+        "severity": "info",
+        "source_ids": [
+          "case_su",
+          "merck_megaloblastic_2026"
+        ]
+      }
+    ],
+    "alerts": [],
+    "exclusions": [
+      {
+        "title": "Почечная функция",
+        "status": "incomplete",
+        "missing": [
+          "eGFR",
+          "creatinine"
+        ]
+      },
+      {
+        "title": "Гемолиз",
+        "status": "incomplete",
+        "missing": [
+          "LDH",
+          "indirect_bilirubin",
+          "haptoglobin"
+        ]
+      },
+      {
+        "title": "Щитовидная железа",
+        "status": "incomplete",
+        "missing": [
+          "TSH"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "code": "iron_vs_inflammation",
+        "text": "Для различения абсолютного дефицита железа и воспалительного ограничения железа полезнее всего заполнить недостающие маркеры доступности железа, а не повторять только ферритин.",
+        "missing_tests": [
+          "TSAT",
+          "Ret_He",
+          "sTfR"
+        ],
+        "source_ids": [
+          "who_ferritin_2020",
+          "bsg_iron_2021",
+          "kdigo_anemia_2026"
+        ]
+      },
+      {
+        "code": "other_anemia_workup",
+        "text": "После исключения основных дефицитов следующий шаг — проверить альтернативные направления из ТЗ: почечную функцию, гемолиз и функцию щитовидной железы.",
+        "missing_tests": [
+          "eGFR",
+          "TSH",
+          "LDH",
+          "indirect_bilirubin",
+          "haptoglobin"
+        ],
+        "source_ids": [
+          "case_su",
+          "kdigo_anemia_2026"
+        ]
+      }
+    ],
+    "rule_class": "anemia_other",
+    "candidate_deficits": []
+  },
+  "model": {
+    "model_id": "0bb5c0e74121632a",
+    "class_scores": {
+      "inflammation_anemia": 0.44485351981919224,
+      "anemia_other": 0.15352081386182995,
+      "iron_deficiency_anemia": 0.1490528774333645,
+      "mixed_deficiency": 0.0731818460755122,
+      "B6_deficiency": 0.059982132441108935,
+      "copper_deficiency": 0.047267972969590746,
+      "folate_deficiency_anemia": 0.04064275017703905,
+      "B12_deficiency_anemia": 0.03149808722236238
+    },
+    "top_class": "inflammation_anemia",
+    "top_score": 0.44485351981919224,
+    "margin": 0.29133270595736227,
+    "score_note": "predict_proba используется как модельный score; он не считается клинически откалиброванной вероятностью.",
+    "sensitivity": [
+      {
+        "feature": "CRP",
+        "value": 18.0,
+        "median": 2.1,
+        "score_change": 0.39546606852065386
+      },
+      {
+        "feature": "RDW",
+        "value": 18.2,
+        "median": 15.5,
+        "score_change": -0.046120012906247176
+      },
+      {
+        "feature": "ferritin",
+        "value": 120.0,
+        "median": 41.7,
+        "score_change": 0.008944116968658378
+      },
+      {
+        "feature": "MCV",
+        "value": 84.0,
+        "median": 88.4,
+        "score_change": -0.004740678862991621
+      },
+      {
+        "feature": "hemoglobin",
+        "value": 109.0,
+        "median": 111.69999999999999,
+        "score_change": 0.0015117503600554083
+      }
+    ]
+  },
+  "final": {
+    "class_code": "inflammation_anemia",
+    "label": "Анемия с воспалительным / железо-ограниченным паттерном",
+    "method": "ml_with_rule_disagreement",
+    "confidence_band": "повышенная неопределённость",
+    "rule_class": "anemia_other",
+    "model_class": "inflammation_anemia",
+    "agreement": false
+  },
+  "coexisting_signals": [],
+  "uncertainty": {
+    "status": "low",
+    "message": "Модельный отрыв заметный, но недостающие данные всё ещё могут изменить дифференциальную картину.",
+    "top_hypothesis": {
+      "code": "inflammation_anemia",
+      "label": "Анемия с воспалительным / железо-ограниченным паттерном",
+      "score": 0.44485351981919224
+    },
+    "alternative": {
+      "code": "anemia_other",
+      "label": "Анемия иной или пока не уточнённой природы",
+      "score": 0.15352081386182995
+    },
+    "margin": 0.29133270595736227,
+    "ambiguity_factors": [],
+    "best_next_measurement": {
+      "feature": "TSAT",
+      "label": "Насыщение трансферрина",
+      "score": 0.8052007503201921,
+      "counterfactual_impact": 0.1694632725052503,
+      "coverage": 0.7497435897435898,
+      "median_top1": 14.5,
+      "median_top2": 33.8,
+      "why": "TSAT <20% поддерживает железо-ограниченный эритропоэз даже при нормальном/высоком ферритине.",
+      "source_ids": [
+        "kdigo_anemia_2026"
+      ]
+    },
+    "items": [
+      {
+        "feature": "TSAT",
+        "label": "Насыщение трансферрина",
+        "score": 0.8052007503201921,
+        "counterfactual_impact": 0.1694632725052503,
+        "coverage": 0.7497435897435898,
+        "median_top1": 14.5,
+        "median_top2": 33.8,
+        "why": "TSAT <20% поддерживает железо-ограниченный эритропоэз даже при нормальном/высоком ферритине.",
+        "source_ids": [
+          "kdigo_anemia_2026"
+        ]
+      },
+      {
+        "feature": "eGFR",
+        "label": "рСКФ",
+        "score": 0.6066396629731982,
+        "counterfactual_impact": 0.30987562876485414,
+        "coverage": 0.7333333333333334,
+        "median_top1": 97.0,
+        "median_top2": 43.0,
+        "why": "рСКФ помогает оценить почечное направление анемии как альтернативу воспалительному.",
+        "source_ids": [
+          "kdigo_anemia_2026"
+        ]
+      },
+      {
+        "feature": "ESR",
+        "label": "СОЭ",
+        "score": 0.5618717953583391,
+        "counterfactual_impact": 0.41865975046087667,
+        "coverage": 0.7671794871794873,
+        "median_top1": 40.0,
+        "median_top2": 8.0,
+        "why": "СОЭ заметно различается между группами «Анемия с воспалительным / железо-ограниченным паттерном» и «Анемия иной или пока не уточнённой природы» в предоставленном датасете и может уменьшить модельную неопределённость.",
+        "source_ids": [
+          "case_su"
+        ]
+      },
+      {
+        "feature": "serum_iron",
+        "label": "Сывороточное железо",
+        "score": 0.4255778962070138,
+        "counterfactual_impact": 0.22054016019148384,
+        "coverage": 0.7497435897435898,
+        "median_top1": 6.7,
+        "median_top2": 22.4,
+        "why": "Сывороточное железо заметно различается между группами «Анемия с воспалительным / железо-ограниченным паттерном» и «Анемия иной или пока не уточнённой природы» в предоставленном датасете и может уменьшить модельную неопределённость.",
+        "source_ids": [
+          "case_su"
+        ]
+      },
+      {
+        "feature": "creatinine",
+        "label": "Креатинин",
+        "score": 0.40309425680036803,
+        "counterfactual_impact": 0.23386079837098384,
+        "coverage": 0.7333333333333334,
+        "median_top1": 77.0,
+        "median_top2": 132.0,
+        "why": "Креатинин заметно различается между группами «Анемия с воспалительным / железо-ограниченным паттерном» и «Анемия иной или пока не уточнённой природы» в предоставленном датасете и может уменьшить модельную неопределённость.",
+        "source_ids": [
+          "case_su"
+        ]
+      }
+    ],
+    "method_note": "Карта неопределённости состоит из двух частей: клинически объяснимых причин неоднозначности и data-driven ранжирования недостающих признаков. Приоритет измерений учитывает различие между двумя ведущими классами в предоставленном датасете, покрытие признака и контрфактическое изменение model score. Это инструмент информационной ценности, а не автоматическое назначение исследования."
+  },
+  "causal_chains": [
+    {
+      "class_code": "inflammation_anemia",
+      "label": "Анемия с воспалительным / железо-ограниченным паттерном",
+      "markers": [
+        "Гемоглобин = 109 г/л",
+        "СРБ = 18 мг/л",
+        "Ферритин = 120 мкг/л"
+      ],
+      "hypothesis": "Анемия с воспалительным / железо-ограниченным паттерном",
+      "causes": [
+        "хроническое воспаление / заболевание как клинический контекст"
+      ],
+      "chain": [
+        "Гемоглобин = 109 г/л",
+        "СРБ = 18 мг/л",
+        "Ферритин = 120 мкг/л",
+        "Анемия с воспалительным / железо-ограниченным паттерном",
+        "хроническое воспаление / заболевание как клинический контекст"
+      ]
+    },
+    {
+      "class_code": "anemia_other",
+      "label": "Анемия иной или пока не уточнённой природы",
+      "markers": [
+        "Гемоглобин = 109 г/л"
+      ],
+      "hypothesis": "Анемия иной или пока не уточнённой природы",
+      "causes": [
+        "причина по доступным данным не определена; требуется сопоставление с анамнезом"
+      ],
+      "chain": [
+        "Гемоглобин = 109 г/л",
+        "Анемия иной или пока не уточнённой природы",
+        "причина по доступным данным не определена; требуется сопоставление с анамнезом"
+      ]
+    }
+  ],
+  "coding": {
+    "status": "reference_only",
+    "candidates": [
+      {
+        "code": "D63*",
+        "label": "Анемия при хронических болезнях, классифицированных в других рубриках",
+        "when": "только при подтверждённом основном заболевании; основной код заболевания обязателен"
+      }
+    ],
+    "note": "МКБ-10 здесь используется как справочник для врача, а не как автокодировщик. Скрининговый класс не равен подтверждённому диагнозу; окончательный код выбирается после клинической верификации.",
+    "source_ids": [
+      "who_icd10_2019",
+      "minzdrav_icd10_registry"
+    ]
+  },
+  "similar_cases": {
+    "local_confirmed": [],
+    "reference_dataset": [
+      {
+        "similarity": 0.9472745806831674,
+        "lab_overlap": 4,
+        "overlap": 6,
+        "class_code": "copper_deficiency",
+        "deficiency_cause": "copper_deficiency",
+        "age_years": 44,
+        "sex": "F",
+        "source": "reference_dataset"
+      },
+      {
+        "similarity": 0.909382485717207,
+        "lab_overlap": 5,
+        "overlap": 7,
+        "class_code": "inflammation_anemia",
+        "deficiency_cause": "inflammation",
+        "age_years": 46,
+        "sex": "F",
+        "source": "reference_dataset"
+      },
+      {
+        "similarity": 0.8908083943334965,
+        "lab_overlap": 3,
+        "overlap": 5,
+        "class_code": "iron_deficiency_anemia",
+        "deficiency_cause": "iron_deficiency",
+        "age_years": 69,
+        "sex": "F",
+        "source": "reference_dataset"
+      },
+      {
+        "similarity": 0.8893553939047463,
+        "lab_overlap": 3,
+        "overlap": 5,
+        "class_code": "iron_deficiency_anemia",
+        "deficiency_cause": "iron_deficiency",
+        "age_years": 85,
+        "sex": "F",
+        "source": "reference_dataset"
+      },
+      {
+        "similarity": 0.8768813572564391,
+        "lab_overlap": 5,
+        "overlap": 7,
+        "class_code": "inflammation_anemia",
+        "deficiency_cause": "inflammation",
+        "age_years": 48,
+        "sex": "F",
+        "source": "reference_dataset"
+      }
+    ],
+    "note": "Локально подтверждённые случаи и reference-выборка служат только для поиска похожих профилей и не являются самостоятельным доказательством диагноза. Локальная база не переобучает ML автоматически."
+  },
+  "sources": [
+    {
+      "id": "case_su",
+      "title": "Кейс Сеченовского университета: веб-сервис ИИ-скрининга латентных дефицитных состояний",
+      "kind": "primary_specification",
+      "location": "spec/Кейс_СУ.pdf",
+      "note": "Главное ТЗ проекта: взрослые пациенты, пороги Hb, 12 классов anemia_class, требования к сервису и отчёту."
+    },
+    {
+      "id": "dataset_su",
+      "title": "Предоставленный датасет deficiency_anemia.csv",
+      "kind": "primary_dataset",
+      "location": "data/deficiency_anemia.csv",
+      "note": "840 взрослых пациентов, 48 столбцов, 12 целевых классов. Используется для обучения, технической валидации и карты неопределённости."
+    },
+    {
+      "id": "variables_su",
+      "title": "Словарь переменных variables.xlsx, предоставленный с кейсом",
+      "kind": "primary_data_dictionary",
+      "location": "spec/variables.xlsx",
+      "note": "48 переменных: имя, описание и исходная единица. Используется как контракт колонок и метаданных; канонизация единиц выполняется приложением отдельно."
+    },
+    {
+      "id": "who_hb_2024",
+      "title": "WHO. Guideline on haemoglobin cutoffs to define anaemia in individuals and populations",
+      "kind": "guideline",
+      "year": 2024,
+      "url": "https://www.who.int/publications-detail-redirect/9789240088542",
+      "note": "Источник по определению анемии и гемоглобиновым порогам; в проекте приоритет имеют точные пороги из кейса."
+    },
+    {
+      "id": "minzdrav_cr_registry_2026",
+      "title": "Рубрикатор клинических рекомендаций Минздрава России",
+      "kind": "official_rf_registry",
+      "jurisdiction": "RU",
+      "checked_at": "2026-10-03",
+      "url": "https://cr.minzdrav.gov.ru/",
+      "note": "Официальный рубрикатор Минздрава РФ. Проверено 03.10.2026: новая КР «Железодефицитная анемия» находится среди разрабатываемых/на общественном обсуждении (окончание 23.10.2026), поэтому проект не использует её как утверждённый норматив."
+    },
+    {
+      "id": "who_ferritin_2020",
+      "title": "WHO guideline on use of ferritin concentrations to assess iron status in individuals and populations",
+      "kind": "who_guideline",
+      "year": 2020,
+      "url": "https://www.who.int/publications/i/item/9789240000124",
+      "note": "ВОЗ: ферритин является маркером запасов железа; при инфекции/воспалении у взрослых значение <70 мкг/л может использоваться как признак дефицита железа."
+    },
+    {
+      "id": "bsg_iron_2021",
+      "title": "British Society of Gastroenterology guidelines for the management of iron deficiency anaemia in adults",
+      "kind": "guideline",
+      "year": 2021,
+      "url": "https://gut.bmj.com/content/70/11/2030.long",
+      "note": "Ferritin как ключевой маркер, влияние воспаления, роль TSAT, sTfR и reticulocyte Hb."
+    },
+    {
+      "id": "kdigo_anemia_2026",
+      "title": "KDIGO Clinical Practice Guideline for the Management of Anemia in Chronic Kidney Disease",
+      "kind": "guideline",
+      "year": 2026,
+      "url": "https://kdigo.org/guidelines/anemia-in-ckd/",
+      "note": "Почечное направление анемии и интерпретация ferritin/TSAT при воспалении и CKD."
+    },
+    {
+      "id": "merck_megaloblastic_2026",
+      "title": "Merck Manual Professional: Megaloblastic Macrocytic Anemias",
+      "kind": "clinical_reference",
+      "year": 2026,
+      "url": "https://www.merckmanuals.com/professional/hematology-and-oncology/anemias-caused-by-deficient-erythropoiesis/megaloblastic-macrocytic-anemias",
+      "note": "B12/folate differential, MMA and homocysteine, macrocytosis and mixed patterns."
+    },
+    {
+      "id": "who_icd10_2019",
+      "title": "WHO ICD-10 — Chapter III, nutritional anaemias and other anaemias",
+      "kind": "who_classification",
+      "year": 2019,
+      "url": "https://icd.who.int/browse10/2019/en",
+      "note": "Семейства D50 (железодефицитная анемия), D51 (B12-дефицитная анемия), D52 (фолиеводефицитная анемия), D53 (другие алиментарные анемии), D63* (анемия при хронических болезнях), D64 (другие анемии)."
+    },
+    {
+      "id": "minzdrav_icd10_registry",
+      "title": "Минздрав России: Международная классификация болезней 10-го пересмотра (МКБ-10) в справочниках рубрикатора",
+      "kind": "official_rf_classification",
+      "jurisdiction": "RU",
+      "checked_at": "2026-10-03",
+      "url": "https://cr.minzdrav.gov.ru/",
+      "note": "МКБ-10 используется только как справочник для врача; скрининговый класс не преобразуется в код автоматически."
+    }
+  ],
+  "warnings": [
+    "Клинические правила и ML-слой расходятся. Итоговый class_code взят из модели, но несогласие показано явно и должно рассматриваться как дополнительная неопределённость."
+  ],
+  "doctor_brief": {
+    "headline": "Анемия с воспалительным / железо-ограниченным паттерном",
+    "priority": [
+      "Ведущая скрининговая гипотеза: Анемия с воспалительным / железо-ограниченным паттерном.",
+      "Клинические правила и ML-слой расходятся — конфликт показан явно, а не скрыт усреднением.",
+      "Наиболее информативное недостающее измерение: Насыщение трансферрина."
+    ],
+    "anchors": [
+      "Гемоглобин 109 г/л",
+      "Ферритин 120 мкг/л",
+      "СРБ 18 мг/л"
+    ],
+    "uncertainty_status": "low"
+  },
+  "patient_conversation": {
+    "plain_summary": "По совокупности доступных лабораторных данных ведущая рабочая гипотеза — «Анемия с воспалительным / железо-ограниченным паттерном». Это скрининговый вывод; окончательную клиническую интерпретацию выполняет врач.",
+    "key_facts": [
+      "Гемоглобин 109 г/л",
+      "Ферритин 120 мкг/л",
+      "СРБ 18 мг/л"
+    ],
+    "uncertainty_plain": "Имеющихся данных недостаточно, чтобы полностью разделить «Анемия с воспалительным / железо-ограниченным паттерном» и «Анемия иной или пока не уточнённой природы». Эти состояния также могут частично сочетаться.",
+    "why_next_step": "Для уточнения картины показатель «Насыщение трансферрина» выбран как наиболее информативный в текущем наборе данных: TSAT <20% поддерживает железо-ограниченный эритропоэз даже при нормальном/высоком ферритине.",
+    "model_ranking": [
+      {
+        "code": "inflammation_anemia",
+        "label": "Анемия с воспалительным / железо-ограниченным паттерном",
+        "rating": 44
+      },
+      {
+        "code": "anemia_other",
+        "label": "Анемия иной или пока не уточнённой природы",
+        "rating": 15
+      },
+      {
+        "code": "iron_deficiency_anemia",
+        "label": "Железодефицитная анемия",
+        "rating": 15
+      }
+    ],
+    "causal_simple": [
+      {
+        "observed": "Гемоглобин = 109 г/л; СРБ = 18 мг/л; Ферритин = 120 мкг/л",
+        "hypothesis": "Анемия с воспалительным / железо-ограниченным паттерном",
+        "possible_context": "хроническое воспаление / заболевание как клинический контекст"
+      },
+      {
+        "observed": "Гемоглобин = 109 г/л",
+        "hypothesis": "Анемия иной или пока не уточнённой природы",
+        "possible_context": "причина по доступным данным не определена; требуется сопоставление с анамнезом"
+      }
+    ],
+    "source_ids": [
+      "case_su"
+    ]
+  }
+}

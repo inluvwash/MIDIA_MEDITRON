@@ -1,0 +1,343 @@
+{
+  "schema_version": 1,
+  "source": "spec/variables.xlsx",
+  "note": "Прямой машиночитаемый слепок словаря переменных из файла организатора; канонические русские единицы приложения хранятся отдельно в standardization_dict.json.",
+  "variables": [
+    {
+      "variable": "patient_id",
+      "description": "идентификатор пациента",
+      "source_unit": "—",
+      "role": "identifier",
+      "used_by_ml": false
+    },
+    {
+      "variable": "age_years",
+      "description": "Возраст на момент обследования",
+      "source_unit": "years",
+      "role": "demographic_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "sex",
+      "description": "Пол пациента",
+      "source_unit": "—",
+      "role": "demographic_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "hemoglobin",
+      "description": "Концентрация гемоглобина",
+      "source_unit": "g/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "RBC",
+      "description": "Количество эритроцитов",
+      "source_unit": "10^12/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "hematocrit",
+      "description": "Гематокрит",
+      "source_unit": "%",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "MCV",
+      "description": "Средний объём эритроцита",
+      "source_unit": "fL",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "MCH",
+      "description": "Среднее содержание гемоглобина в эритроците",
+      "source_unit": "pg",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "MCHC",
+      "description": "Средняя концентрация гемоглобина в эритроците",
+      "source_unit": "g/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "RDW",
+      "description": "Ширина распределения эритроцитов по объёму",
+      "source_unit": "%",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "platelets",
+      "description": "Количество тромбоцитов",
+      "source_unit": "10^9/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "WBC",
+      "description": "Количество лейкоцитов",
+      "source_unit": "10^9/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "reticulocytes",
+      "description": "Ретикулоциты",
+      "source_unit": "%",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "ferritin",
+      "description": "Ферритин",
+      "source_unit": "µg/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "serum_iron",
+      "description": "Сывороточное железо",
+      "source_unit": "µmol/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "transferrin",
+      "description": "Трансферрин",
+      "source_unit": "g/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "TIBC",
+      "description": "Общая железосвязывающая способность сыворотки",
+      "source_unit": "µmol/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "UIBC",
+      "description": "Ненасыщенная железосвязывающая способность сыворотки",
+      "source_unit": "µmol/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "TSAT",
+      "description": "Насыщение трансферрина железом",
+      "source_unit": "%",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "sTfR",
+      "description": "Растворимый рецептор трансферрина",
+      "source_unit": "mg/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "Ret_He",
+      "description": "Гемоглобин ретикулоцитов",
+      "source_unit": "pg",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "vitamin_B12",
+      "description": "Витамин B12",
+      "source_unit": "pg/mL",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "active_B12",
+      "description": "Активный B12 (holotranscobalamin)",
+      "source_unit": "pmol/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "MMA",
+      "description": "Метилмалоновая кислота",
+      "source_unit": "µmol/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "homocysteine",
+      "description": "Гомоцистеин",
+      "source_unit": "µmol/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "folate",
+      "description": "Фолат сыворотки",
+      "source_unit": "ng/mL",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "vitamin_B6",
+      "description": "Витамин B6 (PLP)",
+      "source_unit": "nmol/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "copper",
+      "description": "Медь сыворотки",
+      "source_unit": "µmol/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "ceruloplasmin",
+      "description": "Церулоплазмин",
+      "source_unit": "g/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "CRP",
+      "description": "C-реактивный белок",
+      "source_unit": "mg/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "ESR",
+      "description": "Скорость оседания эритроцитов",
+      "source_unit": "mm/h",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "creatinine",
+      "description": "Креатинин",
+      "source_unit": "µmol/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "eGFR",
+      "description": "Расчётная скорость клубочковой фильтрации",
+      "source_unit": "mL/min/1.73m²",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "TSH",
+      "description": "Тиреотропный гормон",
+      "source_unit": "mIU/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "albumin",
+      "description": "Альбумин",
+      "source_unit": "g/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "LDH",
+      "description": "Лактатдегидрогеназа",
+      "source_unit": "U/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "indirect_bilirubin",
+      "description": "Непрямой билирубин",
+      "source_unit": "µmol/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "haptoglobin",
+      "description": "Гаптоглобин",
+      "source_unit": "g/L",
+      "role": "laboratory_feature",
+      "used_by_ml": true
+    },
+    {
+      "variable": "anemia",
+      "description": "Наличие анемии по уровню гемоглобина с учётом пола",
+      "source_unit": "—",
+      "role": "target_or_posthoc_label",
+      "used_by_ml": false
+    },
+    {
+      "variable": "iron_deficiency",
+      "description": "Наличие дефицита железа",
+      "source_unit": "—",
+      "role": "target_or_posthoc_label",
+      "used_by_ml": false
+    },
+    {
+      "variable": "B12_deficiency",
+      "description": "Наличие дефицита витамина B12",
+      "source_unit": "—",
+      "role": "target_or_posthoc_label",
+      "used_by_ml": false
+    },
+    {
+      "variable": "folate_deficiency",
+      "description": "Наличие дефицита фолата",
+      "source_unit": "—",
+      "role": "target_or_posthoc_label",
+      "used_by_ml": false
+    },
+    {
+      "variable": "B6_deficiency",
+      "description": "Наличие дефицита витамина B6",
+      "source_unit": "—",
+      "role": "target_or_posthoc_label",
+      "used_by_ml": false
+    },
+    {
+      "variable": "copper_deficiency",
+      "description": "Наличие дефицита меди",
+      "source_unit": "—",
+      "role": "target_or_posthoc_label",
+      "used_by_ml": false
+    },
+    {
+      "variable": "inflammation_anemia",
+      "description": "Анемия воспалительного профиля",
+      "source_unit": "—",
+      "role": "target_or_posthoc_label",
+      "used_by_ml": false
+    },
+    {
+      "variable": "mixed_deficiency",
+      "description": "Наличие сочетания двух и более исследуемых дефицитов",
+      "source_unit": "—",
+      "role": "target_or_posthoc_label",
+      "used_by_ml": false
+    },
+    {
+      "variable": "anemia_class",
+      "description": "Итоговая упрощённая группа состояния",
+      "source_unit": "—",
+      "role": "target_class",
+      "used_by_ml": false
+    },
+    {
+      "variable": "deficiency_cause",
+      "description": "Детализированная причина или сочетание причин",
+      "source_unit": "—",
+      "role": "target_detail",
+      "used_by_ml": false
+    }
+  ]
+}

@@ -1,0 +1,349 @@
+{
+  "project": "Мидия",
+  "technical_name": "MIDIA",
+  "version": "5.12.1-final-hackathon",
+  "generated": "2026-10-05",
+  "scope": "Final hackathon project package with current UI, corrected PDF reports, hackathon-oriented repository structure, Docker, tests and documentation. Clinical/ML core preserved.",
+  "entrypoints": {
+    "ui": "HealthScreening.py",
+    "api": "api.py"
+  },
+  "documentation": "docs/",
+  "configuration": "config/",
+  "scripts": "scripts/",
+  "tests": "tests/",
+  "demo": "examples/",
+  "spec": "spec/",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "size_bytes": 82,
+      "sha256": "56cd970d10b3ee00fcd40b9cfe45a1ecafd454240f5a02f3ed163409c668720a"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 136,
+      "sha256": "b93038e13a0618eb458055f77c9ba446e0c2e801a3eeaf5ed5339926b98f7257"
+    },
+    {
+      "path": "Dockerfile",
+      "size_bytes": 402,
+      "sha256": "2060a95545b6f50738ada83a2799e708f4b324fdb14d013dd649c6a4286ed26f"
+    },
+    {
+      "path": "HealthScreening.py",
+      "size_bytes": 79361,
+      "sha256": "e87133f43a9d5c59ccfa0b4d0e13686db6b5e6d0e9918a81ed519316be3e65f3"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 14902,
+      "sha256": "f61ad5cc1fd0725ad6b2bced28c81736bcfd290ed04d0c5ab24b1b84b77306db"
+    },
+    {
+      "path": "START_HERE.txt",
+      "size_bytes": 2177,
+      "sha256": "58c31486f5eafb46ae3bf5e8e58f3ed037418894d72eac522d52ef6105a881e9"
+    },
+    {
+      "path": "api.py",
+      "size_bytes": 6450,
+      "sha256": "eb44507b3e2fe7084d39b8f21b25a1c76a7da0f9f3009d9933eb130f069a5fb3"
+    },
+    {
+      "path": "assets/midia_logo.png",
+      "size_bytes": 862728,
+      "sha256": "6c5bc84be4287f0018dc12211af52884835c34d7215d00717de4130916862905"
+    },
+    {
+      "path": "assets/sechenov_logo.png",
+      "size_bytes": 92573,
+      "sha256": "f3625500652d3eac96e96c367bd8540de19aa9d4c5c693c9f3387c6b141a5590"
+    },
+    {
+      "path": "books/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "config/.env.example",
+      "size_bytes": 830,
+      "sha256": "64d1f3d09fca1880a2341556605acd02f2901d85fe881b87d891dd98b39359e5"
+    },
+    {
+      "path": "config/README.md",
+      "size_bytes": 1501,
+      "sha256": "bd40ea1ecf27b30b822164ffb29eee64fe8f6ecf119bd04a35a94c9cfafaf57a"
+    },
+    {
+      "path": "data/deficiency_anemia.csv",
+      "size_bytes": 150392,
+      "sha256": "9d97e125c961a92222eb31c86188ba7a7736ece1ba59ce296d32e300b107dbb6"
+    },
+    {
+      "path": "docker-compose.yml",
+      "size_bytes": 1034,
+      "sha256": "5b321fa1dd59fff4f74ae2e6419ca621b9eeb1daea5dd10e374a171b94331f7e"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "size_bytes": 10299,
+      "sha256": "41a4cddbc52fded786f60c9bdce4bdd2d2489bae87a9a176c3036ee51c9de385"
+    },
+    {
+      "path": "docs/DATA_AUDIT.md",
+      "size_bytes": 4379,
+      "sha256": "3b2e61de09b4842407f3daaadc01d3d27c8e66db9aa4252e19593e636a991399"
+    },
+    {
+      "path": "docs/HACKATHON_SUBMISSION_CHECKLIST.md",
+      "size_bytes": 1349,
+      "sha256": "ea9014b6e78c295b58c773c75864342d00611506c0da27f61cb8b08ba19dce37"
+    },
+    {
+      "path": "docs/MODEL_CARD.md",
+      "size_bytes": 3103,
+      "sha256": "ebe7dede37f40c2be8afcfa11ecc21da42ce4bd8afec69499f604b2af1f63295"
+    },
+    {
+      "path": "docs/REPOSITORY_STRUCTURE.md",
+      "size_bytes": 1387,
+      "sha256": "0603cdb46f592d6ab4b8c5dd104de9920e5a98999c79842aa8be779b80b23b6c"
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "size_bytes": 5654,
+      "sha256": "9f20184209e0eb8b8ed752450290c78776ee11fb7ec9fe509bc100448f35388e"
+    },
+    {
+      "path": "examples/midia_doctor_report_demo.pdf",
+      "size_bytes": 1644802,
+      "sha256": "99bc02c4624bf343513baaf9413e75c05bf8454816105a3c451cb9ebcd28e770"
+    },
+    {
+      "path": "examples/midia_patient_sheet_demo.pdf",
+      "size_bytes": 1636102,
+      "sha256": "1df447fe56e11fc9f4e24aad589e17cbeeaac30d7f8aba9653c8c6047467c81f"
+    },
+    {
+      "path": "examples/patient.json",
+      "size_bytes": 548,
+      "sha256": "d02ccd50b0076b791408b6572f5a47945ce9680058d5e980e40ba16356e5305d"
+    },
+    {
+      "path": "examples/patient_uncertainty_ret_he.json",
+      "size_bytes": 677,
+      "sha256": "786258852de70d5a65d7187af3c2d67a00903fdf0596598a3324f59d1408ac93"
+    },
+    {
+      "path": "examples/report_doctor.pdf",
+      "size_bytes": 1644802,
+      "sha256": "c3159353a264d43cfb49aaf56a7a7dd1b71db5c3f39e961e4bafb6f3fe35228b"
+    },
+    {
+      "path": "examples/report_human_centered_demo.pdf",
+      "size_bytes": 1648020,
+      "sha256": "13a43c6c8c7cb9a97cd098d44c126515e169b8a7cf3bb7458e84cb431b3f78a9"
+    },
+    {
+      "path": "examples/report_uncertainty_ret_he.pdf",
+      "size_bytes": 1645817,
+      "sha256": "b75c12fcb387bf846be5368e85534fd334f8016fc7e763ca14a36a96e9fb3fad"
+    },
+    {
+      "path": "examples/result.json",
+      "size_bytes": 26458,
+      "sha256": "7b9707e4966b7797aad8d34c80a6a8f1cf2204253a89aad0d4e4b7b98ae28999"
+    },
+    {
+      "path": "examples/result_uncertainty_ret_he.json",
+      "size_bytes": 28350,
+      "sha256": "6a55f22c01a1a79bcecfb178567732a49845796b143efb59f3a39e09ea2edb9b"
+    },
+    {
+      "path": "knowledge/sources.json",
+      "size_bytes": 7874,
+      "sha256": "487d75ead559f131c83d5bea30b42d586982c0fa8fab6e981a2cd53cbc4af246"
+    },
+    {
+      "path": "knowledge/standardization_dict.json",
+      "size_bytes": 8097,
+      "sha256": "de63a3831d04d33f30c9a43f3b5bcbf0a514ae73517086fffe99db7868fe8b42"
+    },
+    {
+      "path": "knowledge/variables.json",
+      "size_bytes": 10291,
+      "sha256": "45fb2028b680e48103e6fb509ecc96627cab90b81e50ea77cfa63b904584ad07"
+    },
+    {
+      "path": "launch.py",
+      "size_bytes": 839,
+      "sha256": "0ab3e6a8eccb77f7c79829b9f98d6797c6a82e04c03920b259791eea60f3e3ad"
+    },
+    {
+      "path": "models/anemia_model.joblib",
+      "size_bytes": 18919193,
+      "sha256": "0bb5c0e74121632ab40f69e057c640b9eb4a0fd82d3ff7b550982da2394f112d"
+    },
+    {
+      "path": "models/data_profile.json",
+      "size_bytes": 29197,
+      "sha256": "e9fd074a9ee7f981008cd16de6aa23328256cce161e375c0831060eec74d4db3"
+    },
+    {
+      "path": "models/metrics.json",
+      "size_bytes": 4863,
+      "sha256": "4eab3f12b4ad1d250f1bc83c36180858327632ae061c491fbcec658523592d01"
+    },
+    {
+      "path": "models/model_metadata.json",
+      "size_bytes": 1491,
+      "sha256": "2a5d1942c0f1c5e69c4c278cee81eb97bd9716e17ab7fc8968508d36e55f5bc9"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "size_bytes": 55,
+      "sha256": "d986f6ddeba93660ed43301439970c5d15b4d9031e610c583960201f97104cda"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 258,
+      "sha256": "88812e0791b22fa08ca8f6e8052955ceb61b293b49e25539ca68d72370dc0aa5"
+    },
+    {
+      "path": "runtime/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "screening/__init__.py",
+      "size_bytes": 333,
+      "sha256": "2020b1a1bf6f205b0101dd384d3cffc01de75b492ba147ea2e95692133a0e5ca"
+    },
+    {
+      "path": "screening/casebase.py",
+      "size_bytes": 2807,
+      "sha256": "b07305669e20d2487099a95163e26a2c6412be35c85d5ade8dd36468b823f2a8"
+    },
+    {
+      "path": "screening/causal.py",
+      "size_bytes": 7932,
+      "sha256": "a13cc3b77de70a9267b54fd912ed5d9a674b47d5ad8882f21cc99dc0e1feaf39"
+    },
+    {
+      "path": "screening/clinical.py",
+      "size_bytes": 18912,
+      "sha256": "c766db43eb5b8a22fd53d42771fd24c0c01d9e1bd65dbcbf9eff9890406f9a27"
+    },
+    {
+      "path": "screening/coding.py",
+      "size_bytes": 5149,
+      "sha256": "e1ec94a7ff5a1f75e2b38fb978c58d78a1164678270511edc761599b75a04f11"
+    },
+    {
+      "path": "screening/communication.py",
+      "size_bytes": 11054,
+      "sha256": "06b5586394126b7837b24b4ed55eb2327cd08c8036efbb4c2190e46f8bde0769"
+    },
+    {
+      "path": "screening/config.py",
+      "size_bytes": 1977,
+      "sha256": "474efeb113ecbaf6edf2a34f592243c0a7b127972101ad3a27c164a34ec7b468"
+    },
+    {
+      "path": "screening/context_ai.py",
+      "size_bytes": 4941,
+      "sha256": "1f6a88f60afd6feba83260652c8bc87b96f9046069aa02b139a48120ceacd202"
+    },
+    {
+      "path": "screening/importers.py",
+      "size_bytes": 50574,
+      "sha256": "51cf1097a9c67dc06c1d74b969d102ddf1740f43a04775bbab7ef7e01a9d7b1e"
+    },
+    {
+      "path": "screening/ml.py",
+      "size_bytes": 8569,
+      "sha256": "6750f697bf3bc3a46b1cbedf97898c7606b4909f85d4c5601c83ef233e2b145a"
+    },
+    {
+      "path": "screening/rag.py",
+      "size_bytes": 17347,
+      "sha256": "05f0c24257fa10f789de396015ac5e539149329a4174e465c0f87f71e1828176"
+    },
+    {
+      "path": "screening/report.py",
+      "size_bytes": 26875,
+      "sha256": "edc0b92d6afb72d2368cc12d81b512aefd1e13f5c73d46521a27125f48853ce9"
+    },
+    {
+      "path": "screening/schema.py",
+      "size_bytes": 17239,
+      "sha256": "a49e26071f7aed153f8c93bc191ef88216085cd60e62ea98eb509ef23ebf9889"
+    },
+    {
+      "path": "screening/service.py",
+      "size_bytes": 10342,
+      "sha256": "16c4db57f081d4b66087a5bea89f923b6d63251adb2c5f3a29e9c9fe1141724d"
+    },
+    {
+      "path": "screening/similar.py",
+      "size_bytes": 4368,
+      "sha256": "7edd1e48b1ca5f4c4cd955f5e5b286bbadcc59d95bb99f6b3870216e7fd04c0e"
+    },
+    {
+      "path": "screening/sources.py",
+      "size_bytes": 1126,
+      "sha256": "3e9c1848e9020e3ecc52497a7371b3a5fdf193de375c0f1b0f48659f7e0ef5d1"
+    },
+    {
+      "path": "screening/uncertainty.py",
+      "size_bytes": 17262,
+      "sha256": "7267b3c2c41492878a001a6fc5b1a90ea015ac831c3410e2aa747a3549534b0e"
+    },
+    {
+      "path": "scripts/README.md",
+      "size_bytes": 456,
+      "sha256": "277b79dd9f312b521fa9c4f86bed5a8973515bfd6a953f6cda6d79e74a4b1adb"
+    },
+    {
+      "path": "scripts/run_tests_windows.bat",
+      "size_bytes": 205,
+      "sha256": "ceda0492e5addeec6cabca3b77c2d6f24ce479d60a00cc847fcff37c9eab23d4"
+    },
+    {
+      "path": "scripts/start_api_windows.bat",
+      "size_bytes": 214,
+      "sha256": "e4db9ad157f6641d9856f44ed8252d7e8718b10800e03f42bf2326aed234fbe9"
+    },
+    {
+      "path": "scripts/start_windows.bat",
+      "size_bytes": 208,
+      "sha256": "324f57bec41d5098683b09219bd11514f08899ad426376a375e7a5305122e46a"
+    },
+    {
+      "path": "spec/variables.xlsx",
+      "size_bytes": 7605,
+      "sha256": "3d01da624a1b0ea5c205a11b4fed8222327cc4b9206185f1125e263c93be03b8"
+    },
+    {
+      "path": "spec/╨Ü╨╡╨╣╤ü_╨í╨ú.pdf",
+      "size_bytes": 3486979,
+      "sha256": "456c87ddadc22c0b26b1d21212f7553c9ced9c1b86eaf3e66eddd7afc2eec3cf"
+    },
+    {
+      "path": "tests/conftest.py",
+      "size_bytes": 144,
+      "sha256": "0cb67ba91674c07e557440292720aa3c3c111f4c41b7db1f4d219a7c68dc6f52"
+    },
+    {
+      "path": "tests/test_core.py",
+      "size_bytes": 14068,
+      "sha256": "e9437807ddd71f6ba3c388f03beae3e1b4df514cdaccb765e713ff279e29d55b"
+    },
+    {
+      "path": "train.py",
+      "size_bytes": 9831,
+      "sha256": "9fa03e2a998f072faa312567ca812db0d634c9fb3ca82b685791635bcf3dd2e2"
+    }
+  ]
+}
